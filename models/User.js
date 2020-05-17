@@ -30,13 +30,13 @@ const UserSchema = new Schema({
         type: String,
     },
     sixPeriod: {
-        type: String,
+        type: Boolean,
     },
     lunchPeriod: {
-        type: String,
+        type: Boolean,
     },
     ASB: {
-        type: String,
+        type: Boolean,
     },
     profileURL: {
         type: String,
@@ -52,3 +52,5 @@ const UserSchema = new Schema({
         default: Date.now
     },
 });
+
+module.exports = mongoose.model('users', UserSchema);
